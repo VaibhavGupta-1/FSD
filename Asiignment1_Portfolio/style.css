@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ededed;
+    background: #081b29;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fcfbfb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px; /* Adjusted for better spacing */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px; /* Adjusted for better spacing */
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url("image.png") center/cover no-repeat;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+.text {
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.home-sci {
+    margin: 25px 0 40px;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    background: transparent;
+    margin-right: 15px;
+    color: #0ef;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s ease;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    color: #081b29;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    transition: box-shadow 0.3s ease;
+    margin-right: 15px; /* Add margin for spacing between buttons */
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+/* About Section */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 100px 10%;
+}
+
+.about img {
+    width: 35vw;
+    height: 35vw;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border: 3px solid #0ef;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.about img:hover {
+    box-shadow: 0 0 50px rgba(0, 238, 255, 0.8);
+    transform: scale(1.03);
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+/* General Section Title Styling */
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+/* Skills Section */
+.skills {
+    padding: 0 10% 100px; /* Reduced top padding as title is now inside */
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.container1 {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: #051129;
+    border: 1px solid #0ef;
+    border-radius: 15px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: none; /* Removed underline for cleaner look */
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.Technical-bars .bar {
+    margin-top: 40px;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.Technical-bars .bar i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.progress-line.android span { width: 90%; }
+.progress-line.kotlin span { width: 95%; }
+.progress-line.jetpack span { width: 85%; }
+.progress-line.java span { width: 75%; }
+.progress-line.github span { width: 80%; }
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #333;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+}
+
+.radial-bar[data-percentage="90"] .path-1 { stroke-dashoffset: calc(502 - (502 * 90 / 100)); }
+.radial-bar[data-percentage="65"] .path-1 { stroke-dashoffset: calc(502 - (502 * 65 / 100)); }
+.radial-bar[data-percentage="75"] .path-1 { stroke-dashoffset: calc(502 - (502 * 75 / 100)); }
+.radial-bar[data-percentage="85"] .path-1 { stroke-dashoffset: calc(502 - (502 * 85 / 100)); }
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Experience Section */
+.experience {
+    padding: 100px 10%;
+    background: #051129; /* Darker background to separate sections */
+}
+
+.experience-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: linear-gradient(145deg, #0a1a32, #081b29);
+    border: 1px solid rgba(0, 238, 255, 0.2);
+    border-left: 5px solid #0ef;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 238, 255, 0.15);
+    border-color: #0ef;
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    color: #0ef;
+    margin-bottom: 5px;
+}
+
+.experience-item .company {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ededed;
+    margin-bottom: 5px;
+}
+
+.experience-item .date {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.experience-item ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #ccc;
+    position: relative;
+    padding-left: 25px;
+}
+
+.experience-item ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #0ef;
+    font-weight: 900;
+}
+
+/* Projects Section */
+.project {
+    padding: 100px 10%;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.row {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: #051129;
+    height: 250px;
+}
+
+.row:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 238, 255, 0.25);
+}
+
+.row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease, filter 0.4s ease;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.row:hover .layer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.layer h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #0ef;
+    border-radius: 50%;
+    color: #081b29;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+.layer a:hover {
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 100px 10%;
+    background: #051129;
+}
+
+.certificates-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certificate-item {
+    background: linear-gradient(145deg, #0a1a32, #051129);
+    border: 1px solid rgba(0, 238, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 238, 255, 0.2);
+    border-color: #0ef;
+}
+
+.certificate-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #0ef;
+}
+
+.certificate-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.certificate-item a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #0ef;
+    border: 1px solid #0ef;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.certificate-item a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 15px #0ef;
+}
+
+/* Contact Section */
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding: 130px 10% 100px;
+}
+
+.contact-text h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: left;
+}
+
+.contact-text h4 {
+    color: #fff;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    margin-right: 15px;
+    transition: 0.5s ease;
+}
+
+.contact-icons i:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: #1a2c3a;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form form input:focus,
+form textarea:focus {
+    border-color: #0ef;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    padding: 14px 60px;
+    background: #0ef;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form form .send:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 10%;
+    background: #051129;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .header { padding: 20px 5%; }
+    section { padding: 100px 5%; }
+    .contact { padding: 100px 5%; }
+}
+
+@media (max-width: 992px) {
+    .navbar { display: none; /* Example for mobile menu - implementation needed */ }
+    .home { flex-direction: column; text-align: center; }
+    .about { grid-template-columns: 1fr; text-align: center; }
+    .about img { margin: 0 auto 30px; }
+    .contact { grid-template-columns: 1fr; }
+    .contact-text { margin-bottom: 30px; text-align: center; }
+}
+
+@media (max-width: 768px) {
+    .home-content h1 { font-size: 48px; }
+    .sub-title { font-size: 48px; }
+    .contact-text h2 { font-size: 40px; }
+}
+
+/* Experience Section Styling */
+.experience {
+    padding: 100px 10%;
+    background: #051129; /* A slightly darker background to separate it */
+}
+
+.experience-content {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content box */
+    background: #0a1f3c; /* A dark blue card background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    border-left: 5px solid #0ef;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.experience-item h3 {
+    font-size: 26px;
+    color: #0ef;
+}
+
+.experience-item h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ededed;
+    margin: 5px 0;
+}
+
+.experience-item .experience-duration {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.experience-item ul {
+    list-style-position: inside;
+}
+
+.experience-item ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #ccc;
+}
