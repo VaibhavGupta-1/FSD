@@ -9,8 +9,6 @@
 
     <div>
         <h1>Student Marks Management</h1>
-
-        <!-- Input Form -->
         <div>
             <h2>Add a New Student</h2>
             <div>
@@ -33,10 +31,8 @@
         </div>
 
         <hr>
-
-        <!-- Controls -->
         <div>
-             <h2>Dashboard & Reports</h2>
+            <h2>Dashboard & Reports</h2>
             <div>
                 <button id="showAllBtn">Show All</button>
                 <button id="showPassingBtn">Show Passing</button>
@@ -46,12 +42,9 @@
         </div>
         
         <hr>
-
-        <!-- Results Display Area -->
         <div id="resultsArea">
             <h2 id="resultsTitle">Results</h2>
             <div id="resultsContent">
-                <!-- Student data and other results will be displayed here -->
                 <p>Add a student or click a button to see the results.</p>
             </div>
         </div>
@@ -59,7 +52,6 @@
     </div>
 
     <script>
-        // Get references to all the interactive HTML elements
         const studentNameInput = document.getElementById('studentName');
         const studentMarksInput = document.getElementById('studentMarks');
         const addStudentBtn = document.getElementById('addStudentBtn');
@@ -69,18 +61,10 @@
         const findTopperBtn = document.getElementById('findTopperBtn');
         const resultsTitle = document.getElementById('resultsTitle');
         const resultsContent = document.getElementById('resultsContent');
-
-        // This array will store all our student objects
         let students = [];
-
-        // --- Event Listeners for Buttons ---
-
-        // Add Student Button
         addStudentBtn.addEventListener('click', () => {
             const name = studentNameInput.value.trim();
             const marks = parseFloat(studentMarksInput.value);
-
-            // Basic validation
             if (name === '') {
                 resultsContent.innerHTML = `<p style="color: red;">Please enter a student name.</p>`;
                 return;
@@ -89,51 +73,39 @@
                 resultsContent.innerHTML = `<p style="color: red;">Please enter valid marks between 0 and 100.</p>`;
                 return;
             }
-
-            // Add the new student to our array
             students.push({ name, marks });
-
-            // Clear the input fields and set focus back to the name field
             studentNameInput.value = '';
             studentMarksInput.value = '';
             studentNameInput.focus();
-
-            // Show all students automatically after adding a new one
             renderStudents(students, 'All Students');
         });
 
-        // Show All Students Button
         showAllBtn.addEventListener('click', () => {
             renderStudents(students, 'All Students');
         });
 
-        // Show Passing Students Button
         showPassingBtn.addEventListener('click', () => {
             const passingStudents = students.filter(student => student.marks >= 40);
             renderStudents(passingStudents, 'Passing Students (>= 40)');
         });
 
-        // Calculate Average Marks Button
         calcAverageBtn.addEventListener('click', () => {
             resultsTitle.textContent = 'Average Marks';
             if (students.length === 0) {
                 resultsContent.innerHTML = '<p>No students to calculate average from.</p>';
                 return;
             }
-            // Use reduce to sum up all the marks
+
             const totalMarks = students.reduce((sum, student) => sum + student.marks, 0);
             const average = totalMarks / students.length;
             resultsContent.innerHTML = `<div><p>The average mark is ${average.toFixed(2)}</p></div>`;
         });
-
-        // Find Topper Button
         findTopperBtn.addEventListener('click', () => {
             resultsTitle.textContent = 'Class Topper';
             if (students.length === 0) {
                 resultsContent.innerHTML = '<p>No students to find a topper from.</p>';
                 return;
             }
-            // Use reduce to find the student with the highest marks
             const topper = students.reduce((max, student) => student.marks > max.marks ? student : max, students[0]);
 
             resultsContent.innerHTML = `
@@ -144,14 +116,9 @@
                 </div>
             `;
         });
-
-
-        // --- Helper Function ---
-
-        // This function is responsible for displaying a list of students on the page
         function renderStudents(studentArray, title) {
             resultsTitle.textContent = title;
-            resultsContent.innerHTML = ''; // Clear previous results
+            resultsContent.innerHTML = '';
 
             if (studentArray.length === 0) {
                 resultsContent.innerHTML = '<p>No students to display.</p>';
@@ -162,8 +129,6 @@
 
             studentArray.forEach(student => {
                 const item = document.createElement('div');
-                
-                // Change color based on pass/fail status
                 const statusColor = student.marks >= 40 ? 'green' : 'red';
                 
                 item.innerHTML = `
